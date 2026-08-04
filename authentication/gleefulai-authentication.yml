@@ -1,0 +1,44 @@
+generated: '2026-08-03'
+method: probed
+status: published
+provider_published: true
+source: https://visibility.gleefulai.com/openapi.json
+description: 'No API keys. Access is priced per call and settled with x402 micropayments
+  — an unauthenticated request returns HTTP 402 with a Payment-Required header carrying
+  a base64 x402 v2 challenge, and the caller pays USDC on Base to proceed. This is
+  a keyless, agent-native access model: an agent can discover the price and pay without
+  a human ever creating an account.'
+verified: '2026-08-03'
+schemes:
+- id: x402
+  type: payment
+  protocol: x402
+  version: 2
+  header: Payment-Required
+  network: eip155:8453 (Base)
+  asset: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 (USDC)
+  pay_to: '0x9b916480d6D32c055563cD0B191543E9851F4E2F'
+  scheme: exact
+  max_timeout_seconds: 300
+keyless_access:
+  available: true
+  free_endpoints:
+  - /api/health
+  - /api/status
+  - /api/catalog
+  - /api/pricing
+  - /api/capabilities
+  - /api/preview/audit
+  - /api/preview/compare
+  - /api/examples/{endpoint}
+  note: Discovery, pricing, capabilities and two teaser previews are free and unauthenticated.
+evidence:
+- url: https://visibility.gleefulai.com/api/audit/score
+  status: 402
+  method: POST
+  note: Live 402 confirmed, Payment-Required header carried a decodable x402 v2 challenge.
+- url: https://visibility.gleefulai.com/api/pricing
+  status: 200
+  note: Machine-readable price table, 14 endpoints, USDC on Base.
+- url: https://visibility.gleefulai.com/api/capabilities
+  status: 200

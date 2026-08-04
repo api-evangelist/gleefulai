@@ -1,0 +1,111 @@
+aid: gleefulai
+url: https://raw.githubusercontent.com/api-evangelist/gleefulai/refs/heads/main/apis.yml
+name: Gleeful AI
+description: 'Gleeful AI publishes Visibility, an AI-visibility and answer-engine-optimization audit API:
+  it scores how visible and understandable a website is to AI assistants and agents, audits AI crawler
+  access (GPTBot, ClaudeBot and others), generates a production-ready llms.txt and schema.org markup,
+  checks brand citation across assistants, and runs competitor gap analysis. The access model is the notable
+  part — there are no API keys. Every priced endpoint answers an unauthenticated request with HTTP 402
+  and an x402 v2 challenge in a Payment-Required header, settled in USDC on Base at prices from $0.06
+  to $0.55 a call, published machine-readably at /api/pricing alongside /api/capabilities and /api/catalog.
+  Discovery, pricing and two preview endpoints are free. It is an agent-native API in both directions:
+  built to be paid for and called by an agent, and built to measure whether agents can read you.'
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gleefulai.png
+created: '2026-08-03'
+modified: '2026-08-03'
+specificationVersion: '0.21'
+type: Index
+position: Producing
+access: 3rd-Party
+kind: contract
+tags:
+- Artificial Intelligence
+- Agents
+- x402
+- Micropayments
+- SEO
+- Audit
+- Website
+- Content
+- Crawlers
+- Monetization
+apis:
+- aid: gleefulai:visibility-ai-audit-api
+  name: Visibility AI Audit API
+  description: AI visibility / AEO audit API with x402 micropayments. No API key required.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Audit
+  - AI Visibility
+  - x402
+  - Agents
+  - SEO
+  properties:
+  - url: openapi/gleefulai-visibility-openapi.json
+    type: OpenAPI
+  - url: https://visibility.gleefulai.com/openapi.json
+    type: X-OpenAPI-Source
+  - url: https://visibility.gleefulai.com/docs
+    type: Documentation
+  - url: https://visibility.gleefulai.com/api/pricing
+    type: Pricing
+  - url: https://visibility.gleefulai.com/api/capabilities
+    type: X-Capabilities
+  - url: https://visibility.gleefulai.com/api/catalog
+    type: X-Catalog
+  - url: authentication/gleefulai-authentication.yml
+    type: Authentication
+  - url: plans/gleefulai-plans.yml
+    type: Plans
+  - url: https://visibility.gleefulai.com/llms.txt
+    type: LlmsText
+common:
+- url: https://visibility.gleefulai.com
+  type: Website
+- url: https://visibility.gleefulai.com/docs
+  type: Documentation
+- url: https://visibility.gleefulai.com/api/pricing
+  type: Pricing
+- url: https://visibility.gleefulai.com/llms.txt
+  type: LlmsText
+- url: authentication/gleefulai-authentication.yml
+  type: Authentication
+- url: plans/gleefulai-plans.yml
+  type: Plans
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+X-Discovery:
+  date: '2026-08-03'
+  method: probed
+  note: Requested by mohammed-mlh in apisio/apis.io#45. Everything below was fetched before the profile
+    was written.
+  findings:
+  - surface: OpenAPI
+    url: https://visibility.gleefulai.com/openapi.json
+    http_status: 200
+    real: true
+    note: OpenAPI 3.1.0, 30 operations, every priced POST documents a 402 response.
+  - surface: x402
+    url: https://visibility.gleefulai.com/api/audit/score
+    http_status: 402
+    real: true
+    note: LIVE 402 with a decodable x402 v2 Payment-Required challenge — exact scheme, eip155:8453, USDC,
+      60000 units ($0.06), 300s timeout.
+  - surface: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+    http_status: 200
+    real: true
+    note: Machine-readable, 14 priced endpoints.
+  - surface: LlmsTxt
+    url: https://visibility.gleefulai.com/llms.txt
+    http_status: 200
+    real: true
+  - surface: Website
+    url: https://gleefulai.com
+    http_status: DNS failure
+    real: false
+    note: The apex does not resolve; only the visibility. subdomain exists. Slug still follows the registrable
+      domain per convention.
