@@ -30,37 +30,448 @@ tags:
 - Crawlers
 - Monetization
 apis:
-- aid: gleefulai:visibility-ai-audit-api
-  name: Visibility AI Audit API
-  description: AI visibility / AEO audit API with x402 micropayments. No API key required.
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+- aid: gleefulai:gleefulai-audit-api
+  name: Gleeful AI Audit API
+  description: The Audit API from Gleeful AI — 3 operation(s) for audit.
   humanURL: https://visibility.gleefulai.com/docs
   baseURL: https://visibility.gleefulai.com
   tags:
   - Audit
-  - AI Visibility
-  - x402
-  - Agents
-  - SEO
   properties:
-  - url: openapi/gleefulai-visibility-openapi.json
-    type: OpenAPI
-  - url: https://visibility.gleefulai.com/openapi.json
-    type: X-OpenAPI-Source
-  - url: https://visibility.gleefulai.com/docs
-    type: Documentation
-  - url: https://visibility.gleefulai.com/api/pricing
-    type: Pricing
-  - url: https://visibility.gleefulai.com/api/capabilities
-    type: X-Capabilities
-  - url: https://visibility.gleefulai.com/api/catalog
-    type: X-Catalog
-  - url: authentication/gleefulai-authentication.yml
-    type: Authentication
-  - url: plans/gleefulai-plans.yml
-    type: Plans
-  - url: https://visibility.gleefulai.com/llms.txt
-    type: LlmsText
+  - type: OpenAPI
+    url: openapi/gleefulai-audit-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-bots-api
+  name: Gleeful AI Bots API
+  description: The Bots API from Gleeful AI — 1 operation(s) for bots.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Bots
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-bots-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-capabilities-api
+  name: Gleeful AI Capabilities API
+  description: The Capabilities API from Gleeful AI — 1 operation(s) for capabilities.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Capabilities
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-capabilities-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-catalog-api
+  name: Gleeful AI Catalog API
+  description: The Catalog API from Gleeful AI — 1 operation(s) for catalog.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-catalog-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-cite-api
+  name: Gleeful AI Cite API
+  description: The Cite API from Gleeful AI — 2 operation(s) for cite.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Cite
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-cite-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-compare-api
+  name: Gleeful AI Compare API
+  description: The Compare API from Gleeful AI — 2 operation(s) for compare.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Compare
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-compare-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-content-api
+  name: Gleeful AI Content API
+  description: The Content API from Gleeful AI — 1 operation(s) for content.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Content
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-content-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-examples-api
+  name: Gleeful AI Examples API
+  description: The Examples API from Gleeful AI — 1 operation(s) for examples.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Examples
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-examples-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-fixes-api
+  name: Gleeful AI Fixes API
+  description: The Fixes API from Gleeful AI — 1 operation(s) for fixes.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Fixes
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-fixes-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-health-api
+  name: Gleeful AI Health API
+  description: The Health API from Gleeful AI — 1 operation(s) for health.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-health-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-llms-api
+  name: Gleeful AI Llms API
+  description: The Llms API from Gleeful AI — 1 operation(s) for llms.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Llms
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-llms-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-meta-api
+  name: Gleeful AI Meta API
+  description: The Meta API from Gleeful AI — 1 operation(s) for meta.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Meta
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-meta-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-preview-api
+  name: Gleeful AI Preview API
+  description: The Preview API from Gleeful AI — 2 operation(s) for preview.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Preview
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-preview-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-pricing-api
+  name: Gleeful AI Pricing API
+  description: The Pricing API from Gleeful AI — 1 operation(s) for pricing.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Pricing
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-pricing-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-probe-api
+  name: Gleeful AI Probe API
+  description: The Probe API from Gleeful AI — 1 operation(s) for probe.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Probe
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-probe-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-schema-api
+  name: Gleeful AI Schema API
+  description: The Schema API from Gleeful AI — 1 operation(s) for schema.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Schema
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-schema-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-status-api
+  name: Gleeful AI Status API
+  description: The Status API from Gleeful AI — 1 operation(s) for status.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Status
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-status-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
 common:
 - url: https://visibility.gleefulai.com
   type: Website
