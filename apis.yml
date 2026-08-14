@@ -12,7 +12,7 @@ description: 'Gleeful AI publishes Visibility, an AI-visibility and answer-engin
   built to be paid for and called by an agent, and built to measure whether agents can read you.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gleefulai.png
 created: '2026-08-03'
-modified: '2026-08-03'
+modified: '2026-08-13'
 specificationVersion: '0.21'
 type: Index
 position: Producing
@@ -473,18 +473,32 @@ apis:
   - type: LlmsText
     url: https://visibility.gleefulai.com/llms.txt
 common:
+- type: DomainSecurity
+  url: security/gleefulai-domain-security.yml
 - url: https://visibility.gleefulai.com
   type: Website
 - url: https://visibility.gleefulai.com/docs
   type: Documentation
 - url: https://visibility.gleefulai.com/api/pricing
   type: Pricing
-- url: https://visibility.gleefulai.com/llms.txt
+- url: llms/gleefulai-llms.txt
   type: LlmsText
 - url: authentication/gleefulai-authentication.yml
   type: Authentication
 - url: plans/gleefulai-plans.yml
   type: Plans
+- url: lifecycle/gleefulai-lifecycle.yml
+  type: Lifecycle
+- url: errors/gleefulai-problem-types.yml
+  type: ErrorCatalog
+- url: conventions/gleefulai-conventions.yml
+  type: Conventions
+- url: conformance/gleefulai-conformance.yml
+  type: Conformance
+- url: packages/gleefulai-packages.yml
+  type: Packages
+- url: rate-limits/gleefulai-rate-limits.yml
+  type: RateLimits
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -520,3 +534,29 @@ X-Discovery:
     real: false
     note: The apex does not resolve; only the visibility. subdomain exists. Slug still follows the registrable
       domain per convention.
+x-enrichment:
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    gleefulai.com was moved to the GoDaddy/Afternic aftermarket on 2026-08-07 and is now
+    a domain listed for sale — the API host visibility.gleefulai.com fails the TLS
+    handshake for its own hostname, every /api/* path 404s from the parking origin, and
+    the wildcard even serves a generated /llms.txt whose text advertises the domain for
+    sale, so the entire surface captured live on 2026-08-03 is gone.
+  evidence:
+  - url: https://visibility.gleefulai.com/api/pricing
+    status: 0
+  - url: http://visibility.gleefulai.com/api/pricing
+    status: 404
+  - url: http://visibility.gleefulai.com/api/health
+    status: 404
+  - url: https://gleefulai.com/lander
+    status: 403
+  - url: http://visibility.gleefulai.com/llms.txt
+    status: 200
+  checked: '2026-08-13'
