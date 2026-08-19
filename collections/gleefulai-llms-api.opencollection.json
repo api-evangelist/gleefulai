@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Visibility AI Audit Llms API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Llms",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Help for /api/llms/generate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/llms/generate"
+          },
+          "docs": "Help for /api/llms/generate"
+        },
+        {
+          "info": {
+            "name": "Generate a production-ready /llms.txt for the site",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/llms/generate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Generate a production-ready /llms.txt for the site"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

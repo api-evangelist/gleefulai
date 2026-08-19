@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Visibility AI Audit Cite API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cite",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Help for /api/cite/check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/cite/check"
+          },
+          "docs": "Help for /api/cite/check"
+        },
+        {
+          "info": {
+            "name": "Simulated brand mention/citation check across 1–5 buyer prompts (LLM, not live engines)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/cite/check",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Simulated brand mention/citation check across 1–5 buyer prompts (LLM, not live engines)"
+        },
+        {
+          "info": {
+            "name": "Help for /api/cite/sources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/cite/sources"
+          },
+          "docs": "Help for /api/cite/sources"
+        },
+        {
+          "info": {
+            "name": "Simulated citation source gap — which third-party domains get cited instead of you",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/cite/sources",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Simulated citation source gap — which third-party domains get cited instead of you"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

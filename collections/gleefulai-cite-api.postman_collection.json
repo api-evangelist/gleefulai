@@ -1,0 +1,392 @@
+{
+  "item": [
+    {
+      "id": "4c160421-e4c1-402f-ba75-d5058fe2d793",
+      "name": "Cite",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eeb1d4cf-9e87-4df3-bc9c-ad59b73c0a7b",
+          "name": "Help for /api/cite/check",
+          "request": {
+            "name": "Help for /api/cite/check",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "cite",
+                "check"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4d05cb87-2ac7-4374-a61d-5063f2b4274f",
+              "name": "Endpoint help, sample request/response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "cite",
+                    "check"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c439c2c-c919-41ae-a699-de8da96b6af2",
+          "name": "Simulated brand mention/citation check across 1–5 buyer prompts (LLM, not live engines)",
+          "request": {
+            "name": "Simulated brand mention/citation check across 1–5 buyer prompts (LLM, not live engines)",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "cite",
+                "check"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"<string>\",\n  \"prompts\": [\n    \"<string>\"\n  ],\n  \"brand\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "750fa0d9-f2fc-4be7-86b2-8d4f8a8f0ea3",
+              "name": "Success with data + signed receipt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "cite",
+                    "check"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\",\n  \"prompts\": [\n    \"<string>\"\n  ],\n  \"brand\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "204223b0-77e8-41f3-9c9e-32bbb87693a6",
+              "name": "Payment required (x402 challenge)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "cite",
+                    "check"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\",\n  \"prompts\": [\n    \"<string>\"\n  ],\n  \"brand\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ae9d6ebe-f4a4-41a7-a0cb-b6be1e4d53dc",
+          "name": "Help for /api/cite/sources",
+          "request": {
+            "name": "Help for /api/cite/sources",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "cite",
+                "sources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3be1fb7f-5c04-4f15-bfa4-c86a2fa1fa24",
+              "name": "Endpoint help, sample request/response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "cite",
+                    "sources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6a673212-4f19-4b02-a349-455cd7d62c78",
+          "name": "Simulated citation source gap — which third-party domains get cited instead of you",
+          "request": {
+            "name": "Simulated citation source gap — which third-party domains get cited instead of you",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "cite",
+                "sources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"<string>\",\n  \"prompts\": [\n    \"<string>\"\n  ],\n  \"brand\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cba9e5e2-2de4-44b7-9723-88e58977ef72",
+              "name": "Success with data + signed receipt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "cite",
+                    "sources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\",\n  \"prompts\": [\n    \"<string>\"\n  ],\n  \"brand\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2c3e387c-0d6c-4aef-8b7b-8a4a41c763b8",
+              "name": "Payment required (x402 challenge)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "cite",
+                    "sources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\",\n  \"prompts\": [\n    \"<string>\"\n  ],\n  \"brand\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://visibility.gleefulai.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2b318a4e-aa58-449c-9067-796d926e6a8f",
+    "name": "Visibility AI Audit Cite API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AI visibility / AEO audit API with x402 micropayments. No API key required.",
+      "type": "text/plain"
+    }
+  }
+}

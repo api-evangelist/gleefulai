@@ -1,0 +1,89 @@
+{
+  "item": [
+    {
+      "id": "72d591ba-ef5e-403b-91cc-01d2665be3e5",
+      "name": "Capabilities",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a73ad178-aae7-4f59-9063-25048c4ecf81",
+          "name": "Machine-readable capabilities",
+          "request": {
+            "name": "Machine-readable capabilities",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "capabilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2bb0900b-11e8-4e04-baab-460eef8ae43a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "capabilities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://visibility.gleefulai.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7c129b6f-0afd-47a1-a152-017bc77ea0fc",
+    "name": "Visibility AI Audit Capabilities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AI visibility / AEO audit API with x402 micropayments. No API key required.",
+      "type": "text/plain"
+    }
+  }
+}

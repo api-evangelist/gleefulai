@@ -1,0 +1,212 @@
+{
+  "item": [
+    {
+      "id": "ffe42102-671a-4bd6-a848-84a497380b60",
+      "name": "Llms",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2070e259-0645-4364-bdbc-c2de0d16d1e9",
+          "name": "Help for /api/llms/generate",
+          "request": {
+            "name": "Help for /api/llms/generate",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "llms",
+                "generate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "581f35ac-d6a1-4ae6-83ef-5c995b3ecc60",
+              "name": "Endpoint help, sample request/response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "llms",
+                    "generate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "700c526d-87b5-4a56-89c7-79ad1deee27a",
+          "name": "Generate a production-ready /llms.txt for the site",
+          "request": {
+            "name": "Generate a production-ready /llms.txt for the site",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "llms",
+                "generate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1f4919ec-4c6f-4dcf-a2a6-45b69b2cf7f8",
+              "name": "Success with data + signed receipt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "llms",
+                    "generate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5e8a2966-af63-4e08-9a45-b411fc8170a6",
+              "name": "Payment required (x402 challenge)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "llms",
+                    "generate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://visibility.gleefulai.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "516f57bd-df6e-4e2c-b646-e501d6ab2fcc",
+    "name": "Visibility AI Audit Llms API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AI visibility / AEO audit API with x402 micropayments. No API key required.",
+      "type": "text/plain"
+    }
+  }
+}

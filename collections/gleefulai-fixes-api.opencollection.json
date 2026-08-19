@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Visibility AI Audit Fixes API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fixes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Help for /api/fixes/generate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/fixes/generate"
+          },
+          "docs": "Help for /api/fixes/generate"
+        },
+        {
+          "info": {
+            "name": "Generate copy-paste fixes for AI visibility issues",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/fixes/generate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Generate copy-paste fixes for AI visibility issues"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,212 @@
+{
+  "item": [
+    {
+      "id": "a666001a-3907-4cf4-93bc-fb2a3032a2ff",
+      "name": "Fixes",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06add33d-a213-4d58-8529-7699ed619bb5",
+          "name": "Help for /api/fixes/generate",
+          "request": {
+            "name": "Help for /api/fixes/generate",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "fixes",
+                "generate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b8e7fa8d-de81-475f-86a8-c520c99efa61",
+              "name": "Endpoint help, sample request/response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "fixes",
+                    "generate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2a8e1e6a-425c-4359-97af-3808afd31176",
+          "name": "Generate copy-paste fixes for AI visibility issues",
+          "request": {
+            "name": "Generate copy-paste fixes for AI visibility issues",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "fixes",
+                "generate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"<string>\",\n  \"issues\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f21da0b8-2bb5-4e32-9969-9e439dca01ed",
+              "name": "Success with data + signed receipt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "fixes",
+                    "generate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\",\n  \"issues\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3a4d92fa-2dfb-41b9-9172-e91faa7e841e",
+              "name": "Payment required (x402 challenge)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "fixes",
+                    "generate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\",\n  \"issues\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://visibility.gleefulai.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "053af90f-90bf-479c-8a60-c59d8e3dbbd1",
+    "name": "Visibility AI Audit Fixes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AI visibility / AEO audit API with x402 micropayments. No API key required.",
+      "type": "text/plain"
+    }
+  }
+}

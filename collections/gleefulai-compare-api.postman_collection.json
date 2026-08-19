@@ -1,0 +1,392 @@
+{
+  "item": [
+    {
+      "id": "6cb18fda-34a6-48a1-b43d-1c26f561c43a",
+      "name": "Compare",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "28d00e40-cb2d-4c27-b626-9afed72db319",
+          "name": "Help for /api/compare/suggest",
+          "request": {
+            "name": "Help for /api/compare/suggest",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "compare",
+                "suggest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "940cb989-8182-4c49-8de7-bdcf6436dd66",
+              "name": "Endpoint help, sample request/response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "compare",
+                    "suggest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "828f6b8b-ef69-4c27-902c-84fae5f55255",
+          "name": "Suggest competitor domains for gap analysis",
+          "request": {
+            "name": "Suggest competitor domains for gap analysis",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "compare",
+                "suggest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"<string>\",\n  \"limit\": \"<integer>\",\n  \"market\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d61a1311-6bf2-4464-be7d-db97977b4fa7",
+              "name": "Success with data + signed receipt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "compare",
+                    "suggest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\",\n  \"limit\": \"<integer>\",\n  \"market\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f9011838-e0ae-40e2-95ed-00add0664c0b",
+              "name": "Payment required (x402 challenge)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "compare",
+                    "suggest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<string>\",\n  \"limit\": \"<integer>\",\n  \"market\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f60314eb-ffa7-4466-881e-7931af58b58f",
+          "name": "Help for /api/compare/gap",
+          "request": {
+            "name": "Help for /api/compare/gap",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "compare",
+                "gap"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "84009fc8-77ae-4169-9b25-b80afd6fd3b0",
+              "name": "Endpoint help, sample request/response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "compare",
+                    "gap"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "901b6b77-144d-4488-98ce-139a717decd3",
+          "name": "Competitor AI visibility gap analysis",
+          "request": {
+            "name": "Competitor AI visibility gap analysis",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "compare",
+                "gap"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targetUrl\": \"<string>\",\n  \"competitors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"focus\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2f1cf287-6be5-4a31-a255-6e1983097b9d",
+              "name": "Success with data + signed receipt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "compare",
+                    "gap"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"targetUrl\": \"<string>\",\n  \"competitors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"focus\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c77b10c2-0972-42fa-aec8-42e38a437dec",
+              "name": "Payment required (x402 challenge)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "compare",
+                    "gap"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"targetUrl\": \"<string>\",\n  \"competitors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"focus\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://visibility.gleefulai.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "60dc008d-2da7-40c7-979a-a42a0d90277f",
+    "name": "Visibility AI Audit Compare API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AI visibility / AEO audit API with x402 micropayments. No API key required.",
+      "type": "text/plain"
+    }
+  }
+}

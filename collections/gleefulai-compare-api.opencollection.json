@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Visibility AI Audit Compare API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Compare",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Help for /api/compare/suggest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/compare/suggest"
+          },
+          "docs": "Help for /api/compare/suggest"
+        },
+        {
+          "info": {
+            "name": "Suggest competitor domains for gap analysis",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/compare/suggest",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Suggest competitor domains for gap analysis"
+        },
+        {
+          "info": {
+            "name": "Help for /api/compare/gap",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/compare/gap"
+          },
+          "docs": "Help for /api/compare/gap"
+        },
+        {
+          "info": {
+            "name": "Competitor AI visibility gap analysis",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/compare/gap",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Competitor AI visibility gap analysis"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

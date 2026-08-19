@@ -1,0 +1,29 @@
+generated: '2026-08-13'
+method: derived
+source: >-
+  openapi/_original/gleefulai-visibility-openapi.json, llms/gleefulai-llms.txt,
+  plans/gleefulai-pricing.json
+limit_count: 0
+limits: []
+headers: []
+status_on_exhaustion: null
+note: >-
+  No rate limits are published anywhere in the harvested surface. Zero matches for
+  RateLimit-*, X-RateLimit-*, Retry-After or 429 across the OpenAPI (36 operations), the
+  llms.txt and the machine-readable pricing document, and no 429 response is declared on
+  any operation. This is an honest zero derived from the provider's own contract, not an
+  unchecked gap. The docs host could not be re-read on this pass because the domain is
+  now parked for sale (see lifecycle/gleefulai-lifecycle.yml), so `method` stays
+  `derived` rather than `searched`.
+rationing_model: >-
+  Consumption was rationed by price rather than by quota: every priced call answered 402
+  with an x402 challenge and cost $0.01-$0.55 in USDC on Base, so cost — not a request
+  ceiling — was the throttle. The free discovery and preview endpoints
+  (/api/health, /api/status, /api/catalog, /api/pricing, /api/capabilities,
+  /api/examples/{endpoint}, /api/preview/audit, /api/preview/compare) carried no
+  documented limit at all.
+gap: >-
+  An agent had no runtime signal for throttling: no limit headers, no 429 contract, and
+  no documented Retry-After. Combined with the absence of idempotency
+  (conventions/gleefulai-conventions.yml), a retry after a timeout risked a second
+  charge with no way to detect back-pressure.

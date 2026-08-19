@@ -1,0 +1,116 @@
+generated: '2026-08-13'
+method: derived
+source: >-
+  openapi/_original/gleefulai-visibility-openapi.json, llms/gleefulai-llms.txt,
+  authentication/gleefulai-authentication.yml, plans/gleefulai-plans.yml
+status: historical
+note: >-
+  DERIVED from the artifacts harvested 2026-08-03 while the API was live. The docs host
+  is now a parked domain (see lifecycle/gleefulai-lifecycle.yml), so nothing here could
+  be re-verified against live documentation on this pass and nothing was upgraded to
+  `searched`.
+authentication:
+  style: none
+  keys: false
+  model: >-
+    Keyless. Access is metered per call and settled with x402 micropayments — an
+    unauthenticated request to a priced endpoint answers HTTP 402 with a base64 x402 v2
+    challenge in a Payment-Required header, and the caller settles USDC on Base
+    (eip155:8453) to proceed. The OpenAPI declares no components.securitySchemes at all.
+  detail: authentication/gleefulai-authentication.yml
+payment:
+  protocol: x402
+  version: 2
+  status_code: 402
+  header: Payment-Required
+  scheme: exact
+  network: eip155:8453 (Base)
+  asset: USDC (0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913)
+  max_timeout_seconds: 300
+  price_range: $0.01 - $0.55 per call
+  free_surface:
+  - GET /api/health
+  - GET /api/status
+  - GET /api/catalog
+  - GET /api/pricing
+  - GET /api/capabilities
+  - GET /api/examples/{endpoint}
+  - POST /api/preview/audit
+  - POST /api/preview/compare
+  detail: plans/gleefulai-plans.yml
+idempotency:
+  supported: false
+  header: null
+  evidence: >-
+    No idempotency key header, parameter or documentation exists anywhere in the
+    harvested surface — zero case-insensitive matches for "idempoten" across the
+    OpenAPI, the llms.txt and the machine-readable pricing document. All 14 priced
+    operations are non-idempotent POSTs that charge on each call, so a retry after a
+    timeout is a second payment. NO `Idempotency` pointer is emitted for this provider.
+pagination:
+  supported: false
+  style: null
+  evidence: >-
+    No cursor, page, offset or limit parameter is declared on any of the 36 operations.
+    Every response is a single audit/extraction result, so there is no collection
+    surface to paginate.
+request_shape:
+  http_methods: [GET, POST]
+  content_type: application/json
+  discoverability_convention: >-
+    A distinctive and genuinely useful convention: every priced POST path also answers
+    GET with a free "help" operation returning the request/response shape for that path
+    (operationIds suffixed `_help`, 14 of them). GET /api/examples/{endpoint} returns a
+    sample request and response for any endpoint. An agent could therefore learn the
+    full input contract without paying and without an API key.
+  request_schemas_declared: false
+  request_schemas_note: >-
+    The published OpenAPI declares no requestBody schemas and components.schemas is
+    empty, so the machine-readable contract carries no input shape — the shapes were
+    only reachable through the live GET help/examples endpoints, which no longer answer.
+response_shape:
+  media_type: application/json
+  schemas_declared: false
+  note: components.schemas is empty; no 200 response schema is declared on any operation.
+error_envelope:
+  format: not-rfc9457
+  documented_statuses: [200, 402]
+  note: >-
+    402 is the only non-2xx status documented across the entire API. See
+    errors/gleefulai-problem-types.yml.
+request_tracing:
+  request_id_header: null
+  evidence: No request-id or correlation header is documented.
+rate_limit_signaling:
+  headers: []
+  status_on_exhaustion: null
+  evidence: >-
+    No X-RateLimit-*, RateLimit-*, or Retry-After header is documented and no 429
+    response is declared. See rate-limits/gleefulai-rate-limits.yml.
+versioning:
+  scheme: none-published
+  current: 0.1.0
+  detail: lifecycle/gleefulai-lifecycle.yml
+discovery:
+  advertised:
+  - /openapi.json
+  - /api/openapi
+  - /api/catalog
+  - /api/pricing
+  - /api/capabilities
+  - /api/status
+  - /api/health
+  - /llms.txt
+  - /.well-known/x402
+  - /.well-known/agent.json
+  source: llms/gleefulai-llms.txt (captured 2026-08-03)
+  verified_now: false
+  note: >-
+    Every path above is unreachable as of 2026-08-13; see
+    well-known/gleefulai-well-known.yml for the per-path probe record.
+cross_links:
+  errors: errors/gleefulai-problem-types.yml
+  lifecycle: lifecycle/gleefulai-lifecycle.yml
+  authentication: authentication/gleefulai-authentication.yml
+  rate_limits: rate-limits/gleefulai-rate-limits.yml
+  plans: plans/gleefulai-plans.yml

@@ -1,0 +1,40 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/gleefulai/json, api.github.com org + repo +
+  code search, and the artifacts harvested from the provider on 2026-08-03
+package_count: 0
+packages: []
+note: >-
+  No first-party client library exists in any public registry. This is a real zero, not
+  an unchecked gap. The provider shipped a keyless HTTP API whose entire access model is
+  an HTTP 402 x402 challenge answered with an on-chain USDC payment — there was never an
+  SDK to install, and the published llms.txt and OpenAPI reference none. NO `SDKs`
+  pointer is emitted.
+searched:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=gleeful
+  status: 200
+  result: >-
+    No first-party package. The only near-name hit is an unrelated `gleeful` package
+    with no connection to Gleeful AI.
+- registry: pypi
+  query: https://pypi.org/pypi/gleefulai/json
+  status: 404
+  result: absent
+- registry: github
+  query: https://api.github.com/orgs/gleefulai
+  status: 404
+  result: no GitHub organization exists under this name
+- registry: github
+  query: https://api.github.com/search/repositories?q=gleefulai
+  status: 200
+  result: >-
+    2 repositories, both API Evangelist's own catalog repos (api-evangelist/gleefulai,
+    api-evangelist/gleefulai-visibility). No provider-owned source repository exists.
+- registry: docs
+  query: https://visibility.gleefulai.com/docs
+  status: 404
+  result: >-
+    Docs host is gone — the domain is parked for sale, so no SDK page could be
+    re-checked on this pass. See lifecycle/gleefulai-lifecycle.yml.

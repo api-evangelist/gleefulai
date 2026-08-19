@@ -1,0 +1,80 @@
+generated: '2026-08-13'
+method: probed
+source: live probes of https://visibility.gleefulai.com and https://gleefulai.com
+host: https://visibility.gleefulai.com
+status: no-documents-served
+note: >-
+  ZERO real well-known documents. Every /.well-known/* path answers HTTP 200 with an
+  HTML body, but that 200 comes from the GoDaddy/Afternic domain-parking wildcard that
+  now sits on gleefulai.com — not from the provider. HTTPS to visibility.gleefulai.com
+  fails at the TLS handshake ("unrecognized name" — no certificate is served for the
+  hostname), so every probe below was made over plain HTTP against the parking origin.
+  This is the textbook soft-200 false positive the enrichment contract warns about, so
+  NO WellKnown and NO SecurityTxt pointer is emitted. The round-1 llms.txt captured on
+  2026-08-03 (llms/gleefulai-llms.txt) recorded that the provider advertised
+  /.well-known/x402 and /.well-known/agent.json while the API was live; neither can be
+  verified now and neither is recorded as present.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  real: false
+  file: null
+  note: HTML parking page, not RFC 9116 text. Treated as a miss.
+- path: /.well-known/openid-configuration
+  status: 200
+  real: false
+  file: null
+  note: HTML parking page, not OIDC discovery JSON. Treated as a miss.
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  real: false
+  file: null
+  note: HTML parking page. Treated as a miss.
+- path: /.well-known/oauth-protected-resource
+  status: 200
+  real: false
+  file: null
+  note: HTML parking page. Treated as a miss.
+- path: /.well-known/api-catalog
+  status: 200
+  real: false
+  file: null
+  note: HTML parking page. Treated as a miss.
+- path: /.well-known/ai-plugin.json
+  status: 200
+  real: false
+  file: null
+  note: HTML parking page, not JSON. Treated as a miss.
+- path: /.well-known/agent-card.json
+  status: 200
+  real: false
+  file: null
+  note: >-
+    HTML parking page, not an AgentCard JSON object. Rejected per the A2A probe rule;
+    no a2a/ artifact was written.
+- path: /.well-known/agent.json
+  status: 200
+  real: false
+  file: null
+  note: >-
+    HTML parking page. The provider's own llms.txt advertised this path while the API
+    was live, but it cannot be verified now and is NOT recorded as a hit.
+- path: /.well-known/x402
+  status: 200
+  real: false
+  file: null
+  note: >-
+    HTML parking page. The provider advertised an x402 discovery document here; the
+    host no longer serves it.
+x-evidence:
+  checked: '2026-08-13'
+  https_handshake: >-
+    https://visibility.gleefulai.com — TLS handshake failure, "tlsv1 unrecognized name";
+    the parking origin serves no certificate for this hostname.
+  parked_by: >-
+    https://gleefulai.com/ returns a 114-byte JS redirect to /lander, which redirects to
+    forsale.godaddy.com/forsale/gleefulai.com. Authoritative nameservers are
+    ns1/ns2.afternic.com; whois Updated Date 2026-08-07.
+  api_paths_gone:
+  - {url: 'http://visibility.gleefulai.com/api/pricing', status: 404}
+  - {url: 'http://visibility.gleefulai.com/api/health', status: 404}

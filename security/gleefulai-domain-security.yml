@@ -1,0 +1,12 @@
+generated: '2026-08-13'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: visibility.gleefulai.com
+  https: false
+domains:
+- domain: gleefulai.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

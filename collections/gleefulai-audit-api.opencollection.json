@@ -1,0 +1,96 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Visibility AI Audit API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Audit",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Help for /api/audit/score",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/audit/score"
+          },
+          "docs": "Help for /api/audit/score"
+        },
+        {
+          "info": {
+            "name": "Fast AI visibility score with top issues",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/audit/score",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Fast AI visibility score with top issues"
+        },
+        {
+          "info": {
+            "name": "Help for /api/audit/full",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/audit/full"
+          },
+          "docs": "Help for /api/audit/full"
+        },
+        {
+          "info": {
+            "name": "Full AI visibility audit with categories and recommendations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/audit/full",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Full AI visibility audit with categories and recommendations"
+        },
+        {
+          "info": {
+            "name": "Help for /api/audit/deep",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/audit/deep"
+          },
+          "docs": "Help for /api/audit/deep"
+        },
+        {
+          "info": {
+            "name": "Multi-page deep AI visibility audit",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/audit/deep",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Multi-page deep AI visibility audit"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

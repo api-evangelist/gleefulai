@@ -1,34 +1,475 @@
-# Gleeful AI — Visibility AI Audit API
+# Gleeful AI (gleefulai)
 
-Audits how visible and understandable a website is to AI assistants and agents: visibility
-scoring, AI-crawler access audits (GPTBot, ClaudeBot), `llms.txt` and schema.org generation,
-brand citation checks, and competitor gap analysis.
+Gleeful AI publishes Visibility, an AI-visibility and answer-engine-optimization audit API: it scores how visible and understandable a website is to AI assistants and agents, audits AI crawler access (GPTBot, ClaudeBot and others), generates a production-ready llms.txt and schema.org markup, checks brand citation across assistants, and runs competitor gap analysis. The access model is the notable part — there are no API keys. Every priced endpoint answers an unauthenticated request with HTTP 402 and an x402 v2 challenge in a Payment-Required header, settled in USDC on Base at prices from $0.06 to $0.55 a call, published machine-readably at /api/pricing alongside /api/capabilities and /api/catalog. Discovery, pricing and two preview endpoints are free. It is an agent-native API in both directions: built to be paid for and called by an agent, and built to measure whether agents can read you.
 
-- **API:** https://visibility.gleefulai.com
-- **Docs:** https://visibility.gleefulai.com/docs
-- **OpenAPI:** https://visibility.gleefulai.com/openapi.json
-- **Pricing (machine-readable):** https://visibility.gleefulai.com/api/pricing
-- **llms.txt:** https://visibility.gleefulai.com/llms.txt
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/gleefulai/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/gleefulai/refs/heads/main/apis.yml)
 
-Part of the [API Evangelist](https://apievangelist.com) network. Profiled 2026-08-03 from a
-listing request; every surface was fetched first — see `X-Discovery` in `apis.yml`.
+## Scope
 
-## Why this one is worth attention
+- **Type:** Index
+- **Position:** Producing
+- **Access:** 3rd-Party
 
-**No API keys.** Access is priced per call and settled with **x402** micropayments. An
-unauthenticated request to a priced endpoint returns a live `HTTP 402` with a
-`Payment-Required` header carrying a base64 x402 v2 challenge:
+## Tags
 
-```json
-{ "x402Version": 2,
-  "accepts": [{ "scheme": "exact", "network": "eip155:8453",
-                "amount": "60000", "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-                "maxTimeoutSeconds": 300 }] }
-```
+- Artificial Intelligence
+- Agents
+- x402
+- Micropayments
+- SEO
+- Audit
+- Website
+- Content
+- Crawlers
+- Monetization
 
-USDC on Base, $0.06–$0.55 a call across 14 priced endpoints. Discovery, pricing, capabilities
-and two preview endpoints are free and unauthenticated.
+## Timestamps
 
-That makes it **agent-native in both directions** — built to be discovered, priced and paid for
-by an agent with no human account creation, and built to measure whether agents can read you.
-A useful reference implementation for the 402 commercialization thread.
+- **Created:** 2026-08-03
+- **Modified:** 2026-08-13
+
+## APIs
+
+### Gleeful AI Audit API
+
+The Audit API from Gleeful AI — 3 operation(s) for audit.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Audit
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-audit-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-audit-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-audit-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Bots API
+
+The Bots API from Gleeful AI — 1 operation(s) for bots.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Bots
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-bots-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-bots-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-bots-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Capabilities API
+
+The Capabilities API from Gleeful AI — 1 operation(s) for capabilities.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Capabilities
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-capabilities-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-capabilities-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-capabilities-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Catalog API
+
+The Catalog API from Gleeful AI — 1 operation(s) for catalog.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Catalog
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-catalog-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-catalog-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-catalog-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Cite API
+
+The Cite API from Gleeful AI — 2 operation(s) for cite.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Cite
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-cite-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-cite-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-cite-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Compare API
+
+The Compare API from Gleeful AI — 2 operation(s) for compare.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Compare
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-compare-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-compare-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-compare-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Content API
+
+The Content API from Gleeful AI — 1 operation(s) for content.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Content
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-content-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-content-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-content-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Examples API
+
+The Examples API from Gleeful AI — 1 operation(s) for examples.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Examples
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-examples-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-examples-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-examples-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Fixes API
+
+The Fixes API from Gleeful AI — 1 operation(s) for fixes.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Fixes
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-fixes-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-fixes-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-fixes-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Health API
+
+The Health API from Gleeful AI — 1 operation(s) for health.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Health
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-health-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-health-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-health-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Llms API
+
+The Llms API from Gleeful AI — 1 operation(s) for llms.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Llms
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-llms-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-llms-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-llms-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Meta API
+
+The Meta API from Gleeful AI — 1 operation(s) for meta.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Meta
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-meta-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-meta-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-meta-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Preview API
+
+The Preview API from Gleeful AI — 2 operation(s) for preview.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Preview
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-preview-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Pricing API
+
+The Pricing API from Gleeful AI — 1 operation(s) for pricing.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Pricing
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-pricing-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-pricing-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-pricing-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Probe API
+
+The Probe API from Gleeful AI — 1 operation(s) for probe.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Probe
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-probe-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-probe-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-probe-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Schema API
+
+The Schema API from Gleeful AI — 1 operation(s) for schema.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Schema
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-schema-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-schema-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-schema-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+### Gleeful AI Status API
+
+The Status API from Gleeful AI — 1 operation(s) for status.
+
+- **Human URL:** [https://visibility.gleefulai.com/docs](https://visibility.gleefulai.com/docs)
+- **Base URL:** `https://visibility.gleefulai.com`
+
+#### Tags
+
+- Status
+
+#### Properties
+
+- [OpenAPI](openapi/gleefulai-status-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/gleefulai-status-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/gleefulai-status-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [X- Open A P I- Source](https://visibility.gleefulai.com/openapi.json)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [X- Capabilities](https://visibility.gleefulai.com/api/capabilities)
+- [X- Catalog](https://visibility.gleefulai.com/api/catalog)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Llms Text](https://visibility.gleefulai.com/llms.txt)
+
+## Common Properties
+
+- [Domain Security](security/gleefulai-domain-security.yml)
+- [Website](https://visibility.gleefulai.com)
+- [Documentation](https://visibility.gleefulai.com/docs)
+- [Pricing](https://visibility.gleefulai.com/api/pricing)
+- [Llms Text](llms/gleefulai-llms.txt)
+- [Authentication](authentication/gleefulai-authentication.yml)
+- [Plans](plans/gleefulai-plans.yml)
+- [Lifecycle](lifecycle/gleefulai-lifecycle.yml)
+- [Error Catalog](errors/gleefulai-problem-types.yml)
+- [Conventions](conventions/gleefulai-conventions.yml)
+- [Conformance](conformance/gleefulai-conformance.yml)
+- [Packages](packages/gleefulai-packages.yml)
+- [Rate Limits](rate-limits/gleefulai-rate-limits.yml)
+
+## Maintainers
+
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com

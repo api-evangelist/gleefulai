@@ -1,0 +1,175 @@
+generated: '2026-08-13'
+method: derived
+source: openapi/_original/gleefulai-visibility-openapi.json + plans/gleefulai-pricing.json
+format: x402-payment-required
+status: historical
+note: 'DERIVED from the OpenAPI captured 2026-08-03, while the API was live. The host is now parked and
+  the API is gone (see lifecycle/gleefulai-lifecycle.yml) — this catalog is a record of what the contract
+  declared, not a live error surface. The spec is NOT RFC 9457: it declares no application/problem+json
+  media type, no error schemas (components.schemas is empty) and no 4xx/5xx responses other than 402.
+  Across 36 documented operations the ONLY non-2xx response documented anywhere is the 402 payment challenge
+  on the 14 priced POSTs — there is no documented 400, 401, 403, 404, 422, 429 or 5xx contract at all,
+  which is the single largest error-semantics gap in this API.'
+envelope:
+  transport: HTTP 402 status + Payment-Required response header
+  header: Payment-Required
+  encoding: base64-encoded x402 v2 challenge
+  network: eip155:8453 (Base)
+  asset: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 (USDC)
+  scheme: exact
+  max_timeout_seconds: 300
+  source: authentication/gleefulai-authentication.yml (probed 2026-08-03)
+coverage:
+  operations_total: 36
+  operations_with_402: 14
+  operations_with_any_4xx_5xx_besides_402: 0
+  rfc9457: false
+  error_schemas_defined: 0
+problems:
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/audit/deep
+  operationId: _api_audit_deep
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_audit_deep
+  description: Payment required (x402 challenge)
+  price: $0.35
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/audit/full
+  operationId: _api_audit_full
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_audit_full
+  description: Payment required (x402 challenge)
+  price: $0.15
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/audit/score
+  operationId: _api_audit_score
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_audit_score
+  description: Payment required (x402 challenge)
+  price: $0.06
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/bots/audit
+  operationId: _api_bots_audit
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_bots_audit
+  description: Payment required (x402 challenge)
+  price: $0.12
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/cite/check
+  operationId: _api_cite_check
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_cite_check
+  description: Payment required (x402 challenge)
+  price: $0.20
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/cite/sources
+  operationId: _api_cite_sources
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_cite_sources
+  description: Payment required (x402 challenge)
+  price: $0.30
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/compare/gap
+  operationId: _api_compare_gap
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_compare_gap
+  description: Payment required (x402 challenge)
+  price: $0.50
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/compare/suggest
+  operationId: _api_compare_suggest
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_compare_suggest
+  description: Payment required (x402 challenge)
+  price: $0.08
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/content/answerability
+  operationId: _api_content_answerability
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_content_answerability
+  description: Payment required (x402 challenge)
+  price: $0.12
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/fixes/generate
+  operationId: _api_fixes_generate
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_fixes_generate
+  description: Payment required (x402 challenge)
+  price: $0.55
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/llms/generate
+  operationId: _api_llms_generate
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_llms_generate
+  description: Payment required (x402 challenge)
+  price: $0.25
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/meta/extract
+  operationId: _api_meta_extract
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_meta_extract
+  description: Payment required (x402 challenge)
+  price: $0.02
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/probe/fetch
+  operationId: _api_probe_fetch
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_probe_fetch
+  description: Payment required (x402 challenge)
+  price: $0.01
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+- status: 402
+  title: Payment Required (x402 challenge)
+  operation: POST /api/schema/generate
+  operationId: _api_schema_generate
+  source_operation: openapi/_original/gleefulai-visibility-openapi.json#_api_schema_generate
+  description: Payment required (x402 challenge)
+  price: $0.40
+  remediation: Decode the base64 x402 v2 challenge from the Payment-Required response header, settle the
+    quoted USDC amount on Base (eip155:8453) to the payTo address within max_timeout_seconds, then replay
+    the request with the payment proof.
+undocumented:
+- status: 4xx
+  note: No 400/401/403/404/422 responses are declared on any operation.
+- status: 429
+  note: No rate-limit exhaustion response is declared; see rate-limits/gleefulai-rate-limits.yml.
+- status: 5xx
+  note: No server-error responses are declared on any operation.

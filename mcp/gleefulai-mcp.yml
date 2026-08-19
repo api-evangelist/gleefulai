@@ -1,0 +1,29 @@
+generated: '2026-08-13'
+method: searched
+status: none
+source: >-
+  npm registry search, api.github.com org/repo search, and the provider's own llms.txt
+  and OpenAPI harvested 2026-08-03
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: none
+  verified: searched
+note: >-
+  Gleeful AI never shipped an MCP server. No hosted endpoint, no stdio package, no
+  registry entry — the provider's own llms.txt lists its agent-discovery surface as
+  /.well-known/x402, /.well-known/agent.json, /openapi.json, /api/catalog and /llms.txt,
+  with no MCP anywhere. The npm search returns no first-party package and there is no
+  gleefulai GitHub organization (404). No candidate tool list is derived here: the API
+  host is now a parked domain and every /api/* path returns 404 (see
+  lifecycle/gleefulai-lifecycle.yml), so a derived tool list would describe a surface no
+  agent can call. NO `MCPServer` pointer is emitted — `mode: none` is not an agent
+  surface, and the pointer would falsely credit one.
+tools: []
+searched:
+- {query: 'https://registry.npmjs.org/-/v1/search?text=gleeful', status: 200, result: no first-party MCP package}
+- {query: 'https://api.github.com/orgs/gleefulai', status: 404, result: no GitHub organization}
+- {url: 'http://visibility.gleefulai.com/api/catalog', status: 404, result: 'provider catalog endpoint gone'}
+- {source: llms/gleefulai-llms.txt, result: 'captured 2026-08-03; no MCP endpoint listed'}

@@ -1,0 +1,81 @@
+generated: '2026-08-13'
+method: derived
+source: >-
+  openapi/_original/gleefulai-visibility-openapi.json,
+  authentication/gleefulai-authentication.yml, plans/gleefulai-plans.yml
+status: historical
+note: >-
+  DERIVED from the contract harvested 2026-08-03. The provider published no compliance
+  or certification program of any kind, and the trust/security probe found nothing (see
+  security/). NO `Compliance` pointer is emitted.
+standards:
+- id: openapi-3.1
+  conforms: true
+  evidence: >-
+    openapi/_original/gleefulai-visibility-openapi.json declares openapi 3.1.0 with 22
+    paths and 36 operations.
+- id: x402
+  conforms: true
+  version: 2
+  evidence: >-
+    Live HTTP 402 observed 2026-08-03 on POST /api/audit/score carrying a decodable
+    x402 v2 challenge in a Payment-Required header — scheme `exact`, network
+    eip155:8453, USDC, 60000 units ($0.06), 300s timeout. Recorded in
+    authentication/gleefulai-authentication.yml and apis.yml X-Discovery.
+- id: eip-3009
+  conforms: true
+  evidence: >-
+    Implied by x402 `exact` settlement in USDC on Base; the provider published the
+    asset contract and payTo address machine-readably at /api/pricing. Not independently
+    verified on-chain by this pipeline.
+- id: llms-txt
+  conforms: true
+  evidence: >-
+    /llms.txt returned 200 with a real llms.txt document on 2026-08-03, saved verbatim
+    to llms/gleefulai-llms.txt. The path now returns a domain-parking page instead.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    No application/problem+json media type and no error schemas anywhere in the spec;
+    402 is the only non-2xx status documented.
+- id: oauth2
+  conforms: false
+  evidence: No securitySchemes are declared; the access model is keyless x402 payment.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect discovery document is served.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: >-
+    /.well-known/security.txt returns only the parking wildcard's HTML; no security.txt
+    was ever captured. See well-known/gleefulai-well-known.yml.
+- id: rfc8594-sunset
+  conforms: false
+  evidence: >-
+    No Sunset/Deprecation header support documented. The API was withdrawn with no
+    announced deprecation window — see lifecycle/gleefulai-lifecycle.yml.
+- id: rfc9615-ratelimit-headers
+  conforms: false
+  evidence: No rate-limit response headers or 429 contract documented.
+- id: a2a
+  conforms: false
+  evidence: >-
+    The provider's own llms.txt advertised /.well-known/agent.json, but no agent card
+    was ever captured and the path cannot be verified now — it returns the parking
+    wildcard's HTML, which is rejected per the A2A probe rule. No a2a/ artifact exists.
+- id: asyncapi
+  conforms: false
+  applicable: false
+  evidence: >-
+    Request/response only. No webhooks, events, streaming or callbacks are declared in
+    the spec or the llms.txt, so there is no event surface to describe.
+- id: mcp
+  conforms: false
+  evidence: No MCP server was ever published. See mcp/gleefulai-mcp.yml.
+compliance_program:
+  published: false
+  certifications: []
+  evidence: >-
+    probe-security-programs.py found no vulnerability-disclosure program and no trust
+    center (vdp=none trust=none, 2026-08-13). No SOC 2 / ISO 27001 / PCI / HIPAA /
+    GDPR claim appears in any harvested artifact.

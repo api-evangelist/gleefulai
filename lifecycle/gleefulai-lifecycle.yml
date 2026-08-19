@@ -1,0 +1,79 @@
+generated: '2026-08-13'
+method: probed
+source: live probes of gleefulai.com / visibility.gleefulai.com + public whois
+status: decommissioned
+summary: >-
+  The Gleeful AI Visibility API is gone. Between the round-1 harvest on 2026-08-03 —
+  when every surface below answered live — and this pass on 2026-08-13, gleefulai.com
+  was moved to the GoDaddy/Afternic aftermarket and is now a domain listed for sale.
+  The API host visibility.gleefulai.com no longer terminates TLS for its own hostname,
+  and every /api/* path returns 404 from the parking origin. This is a lifecycle
+  record of an API's death, not a deprecation policy: the provider published no
+  versioning policy, no deprecation policy, no Sunset/Deprecation header support, no
+  SLA and no status page, and it gave no notice before the surface disappeared.
+versioning:
+  scheme: none-published
+  current: 0.1.0
+  source: openapi/_original/gleefulai-visibility-openapi.json (info.version)
+  note: >-
+    The OpenAPI carried info.version 0.1.0 and no path/header/date versioning. No
+    versioning policy page was ever published.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No RFC 8594 Sunset or Deprecation header support was documented, and none of the
+    22 documented paths were marked deprecated in the spec. The API went from live to
+    unreachable with no announced deprecation window.
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: null
+  note: >-
+    The provider exposed GET /api/status and GET /api/health as API operations, not a
+    hosted status page. Both now return 404, so no StatusPage pointer is emitted.
+deprecated_operations: []
+timeline:
+- date: '2025-09-12'
+  event: gleefulai.com registered (whois Creation Date).
+- date: '2026-08-03'
+  event: >-
+    API Evangelist harvest — OpenAPI 3.1.0 with 22 paths / 36 operations fetched 200
+    from https://visibility.gleefulai.com/openapi.json; POST /api/audit/score returned
+    a live HTTP 402 with a decodable x402 v2 challenge; /api/pricing and /llms.txt
+    returned 200. Recorded in apis.yml X-Discovery.
+- date: '2026-08-07'
+  event: >-
+    whois Updated Date. Nameservers are ns1/ns2.afternic.com and the domain now
+    resolves to GoDaddy aftermarket parking IPs (76.223.54.146, 13.248.169.48).
+- date: '2026-08-13'
+  event: >-
+    This pass — API surface confirmed gone. HTTPS to visibility.gleefulai.com fails the
+    TLS handshake; over HTTP every /api/* path 404s and every other path returns the
+    parking lander.
+- date: '2026-09-12'
+  event: Registry expiry date on record (whois Registry Expiry Date). Not yet reached.
+x-evidence:
+  checked: '2026-08-13'
+  probes:
+  - {url: 'https://visibility.gleefulai.com/api/pricing', status: 0, note: 'TLS handshake failure — tlsv1 unrecognized name'}
+  - {url: 'http://visibility.gleefulai.com/api/pricing', status: 404}
+  - {url: 'http://visibility.gleefulai.com/api/health', status: 404}
+  - {url: 'http://visibility.gleefulai.com/api/status', status: 404}
+  - {url: 'http://visibility.gleefulai.com/api/catalog', status: 404}
+  - {url: 'http://visibility.gleefulai.com/api/capabilities', status: 404}
+  - {url: 'http://visibility.gleefulai.com/openapi.json', status: 200, note: 'HTML parking redirect, not the spec'}
+  - {url: 'https://gleefulai.com/', status: 200, note: '114-byte JS redirect to /lander'}
+  - {url: 'https://gleefulai.com/lander', status: 403, note: 'Akamai Access Denied naming forsale.godaddy.com/forsale/gleefulai.com as the target'}
+  - {url: 'http://visibility.gleefulai.com/llms.txt', status: 200, note: 'Parking-generated llms.txt whose text states the domain is for sale on GoDaddy aftermarket'}
+  registry:
+    registrar: Unstoppable Domains Inc.
+    nameservers: [NS1.AFTERNIC.COM, NS2.AFTERNIC.COM]
+    created: '2025-09-12'
+    updated: '2026-08-07'
+    expires: '2026-09-12'
+  no_successor_found: >-
+    No replacement host was located. There is no gleefulai GitHub organization (404),
+    no npm or PyPI package under the name, and the only public repositories carrying
+    the slug are API Evangelist's own catalog repos.

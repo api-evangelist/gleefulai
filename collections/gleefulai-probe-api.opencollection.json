@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Visibility AI Audit Probe API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Probe",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Help for /api/probe/fetch",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://visibility.gleefulai.com/api/probe/fetch"
+          },
+          "docs": "Help for /api/probe/fetch"
+        },
+        {
+          "info": {
+            "name": "Cheap URL probe — status, redirects, content-type, X-Robots-Tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://visibility.gleefulai.com/api/probe/fetch",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Cheap URL probe — status, redirects, content-type, X-Robots-Tag"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
