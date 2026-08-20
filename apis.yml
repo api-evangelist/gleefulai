@@ -296,6 +296,8 @@ apis:
   humanURL: https://visibility.gleefulai.com/docs
   baseURL: https://visibility.gleefulai.com
   tags:
+  - LLMs
+  tags_raw:
   - Llms
   properties:
   - type: OpenAPI
