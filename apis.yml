@@ -10,6 +10,18 @@ description: 'Gleeful AI publishes Visibility, an AI-visibility and answer-engin
   to $0.55 a call, published machine-readably at /api/pricing alongside /api/capabilities and /api/catalog.
   Discovery, pricing and two preview endpoints are free. It is an agent-native API in both directions:
   built to be paid for and called by an agent, and built to measure whether agents can read you.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gleefulai.png
 created: '2026-08-03'
 modified: '2026-08-13'
