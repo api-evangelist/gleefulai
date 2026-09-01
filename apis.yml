@@ -308,7 +308,7 @@ apis:
   humanURL: https://visibility.gleefulai.com/docs
   baseURL: https://visibility.gleefulai.com
   tags:
-  - Llms
+  - LLMs
   tags_raw:
   - Llms
   properties:
