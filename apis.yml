@@ -315,34 +315,6 @@ apis:
     url: plans/gleefulai-plans.yml
   - type: LlmsText
     url: https://visibility.gleefulai.com/llms.txt
-- aid: gleefulai:gleefulai-llms-api
-  name: Gleeful AI Llms API
-  description: The Llms API from Gleeful AI — 1 operation(s) for llms.
-  humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
-  tags:
-  - LLMs
-  tags_raw:
-  - Llms
-  properties:
-  - type: OpenAPI
-    url: openapi/gleefulai-llms-api-openapi.yml
-  - type: X-OpenAPI-Source
-    url: https://visibility.gleefulai.com/openapi.json
-  - type: Documentation
-    url: https://visibility.gleefulai.com/docs
-  - type: Pricing
-    url: https://visibility.gleefulai.com/api/pricing
-  - type: X-Capabilities
-    url: https://visibility.gleefulai.com/api/capabilities
-  - type: X-Catalog
-    url: https://visibility.gleefulai.com/api/catalog
-  - type: Authentication
-    url: authentication/gleefulai-authentication.yml
-  - type: Plans
-    url: plans/gleefulai-plans.yml
-  - type: LlmsText
-    url: https://visibility.gleefulai.com/llms.txt
 - aid: gleefulai:gleefulai-meta-api
   name: Gleeful AI Meta API
   description: The Meta API from Gleeful AI — 1 operation(s) for meta.
@@ -483,6 +455,32 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/gleefulai-status-api-openapi.yml
+  - type: X-OpenAPI-Source
+    url: https://visibility.gleefulai.com/openapi.json
+  - type: Documentation
+    url: https://visibility.gleefulai.com/docs
+  - type: Pricing
+    url: https://visibility.gleefulai.com/api/pricing
+  - type: X-Capabilities
+    url: https://visibility.gleefulai.com/api/capabilities
+  - type: X-Catalog
+    url: https://visibility.gleefulai.com/api/catalog
+  - type: Authentication
+    url: authentication/gleefulai-authentication.yml
+  - type: Plans
+    url: plans/gleefulai-plans.yml
+  - type: LlmsText
+    url: https://visibility.gleefulai.com/llms.txt
+- aid: gleefulai:gleefulai-llms-api
+  name: Gleeful AI Llms API
+  description: The Llms API from Gleeful AI — 1 operation(s) for llms.
+  humanURL: https://visibility.gleefulai.com/docs
+  baseURL: https://visibility.gleefulai.com
+  tags:
+  - Llms
+  properties:
+  - type: OpenAPI
+    url: openapi/gleefulai-llms-api-openapi.yml
   - type: X-OpenAPI-Source
     url: https://visibility.gleefulai.com/openapi.json
   - type: Documentation
