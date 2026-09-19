@@ -50,6 +50,17 @@ tags:
 - Micropayments
 - SEO
 - Audit
+- Websites
+- Content
+- Crawlers
+- Monetization
+tags_raw:
+- Artificial Intelligence
+- Agents
+- x402
+- Micropayments
+- SEO
+- Audit
 - Website
 - Content
 - Crawlers
@@ -243,6 +254,8 @@ apis:
   humanURL: https://visibility.gleefulai.com/docs
   baseURL: https://visibility.gleefulai.com
   tags:
+  - Example
+  tags_raw:
   - Examples
   properties:
   - type: OpenAPI
@@ -477,6 +490,8 @@ apis:
   humanURL: https://visibility.gleefulai.com/docs
   baseURL: https://visibility.gleefulai.com
   tags:
+  - LLM
+  tags_raw:
   - Llms
   properties:
   - type: OpenAPI
