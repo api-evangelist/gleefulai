@@ -16,3 +16,5 @@ paths:
           description: OK
       tags:
       - Catalog
+      operationId: getApiCatalog
+      x-operation-id-source: derived

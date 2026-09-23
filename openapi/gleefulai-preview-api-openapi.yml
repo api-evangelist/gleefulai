@@ -16,6 +16,8 @@ paths:
           description: OK
       tags:
       - Preview
+      operationId: postApiPreviewAudit
+      x-operation-id-source: derived
   /api/preview/compare:
     post:
       summary: Free compare preview teaser
@@ -24,3 +26,5 @@ paths:
           description: OK
       tags:
       - Preview
+      operationId: postApiPreviewCompare
+      x-operation-id-source: derived

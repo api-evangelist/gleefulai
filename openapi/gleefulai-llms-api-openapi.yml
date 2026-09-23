@@ -6,7 +6,7 @@ info:
 servers:
 - url: https://visibility.gleefulai.com
 tags:
-- name: Llms
+- name: LLMs
 paths:
   /api/llms/generate:
     get:
@@ -16,7 +16,7 @@ paths:
         '200':
           description: Endpoint help, sample request/response
       tags:
-      - Llms
+      - LLMs
     post:
       summary: Generate a production-ready /llms.txt for the site
       operationId: _api_llms_generate
@@ -39,4 +39,4 @@ paths:
         '402':
           description: Payment required (x402 challenge)
       tags:
-      - Llms
+      - LLMs

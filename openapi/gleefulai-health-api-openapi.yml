@@ -16,3 +16,5 @@ paths:
           description: OK
       tags:
       - Health
+      operationId: getApiHealth
+      x-operation-id-source: derived

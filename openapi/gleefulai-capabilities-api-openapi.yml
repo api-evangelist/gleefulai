@@ -16,3 +16,5 @@ paths:
           description: OK
       tags:
       - Capabilities
+      operationId: getApiCapabilities
+      x-operation-id-source: derived

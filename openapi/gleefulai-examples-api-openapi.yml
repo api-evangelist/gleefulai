@@ -23,3 +23,5 @@ paths:
           description: OK
       tags:
       - Examples
+      operationId: getApiExamplesByEndpoint
+      x-operation-id-source: derived

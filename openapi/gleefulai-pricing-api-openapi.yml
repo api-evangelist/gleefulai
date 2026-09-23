@@ -16,3 +16,5 @@ paths:
           description: OK
       tags:
       - Pricing
+      operationId: getApiPricing
+      x-operation-id-source: derived

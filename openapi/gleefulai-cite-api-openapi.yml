@@ -18,7 +18,7 @@ paths:
       tags:
       - Cite
     post:
-      summary: Simulated brand mention/citation check across 1–5 buyer prompts (LLM, not live engines)
+      summary: Simulated brand mention/citation check across 1–5 buyer prompts (LLM, not live…
       operationId: _api_cite_check
       x-price: $0.20
       requestBody:
@@ -58,7 +58,7 @@ paths:
       tags:
       - Cite
     post:
-      summary: Simulated citation source gap — which third-party domains get cited instead of you
+      summary: Simulated citation source gap — which third-party domains get cited instead of…
       operationId: _api_cite_sources
       x-price: $0.30
       requestBody:
