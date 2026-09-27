@@ -70,7 +70,6 @@ apis:
   name: Gleeful AI Audit API
   description: The Audit API from Gleeful AI — 3 operation(s) for audit.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Audit
   properties:
@@ -96,7 +95,6 @@ apis:
   name: Gleeful AI Bots API
   description: The Bots API from Gleeful AI — 1 operation(s) for bots.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Bots
   properties:
@@ -122,7 +120,6 @@ apis:
   name: Gleeful AI Capabilities API
   description: The Capabilities API from Gleeful AI — 1 operation(s) for capabilities.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Capabilities
   properties:
@@ -148,7 +145,6 @@ apis:
   name: Gleeful AI Catalog API
   description: The Catalog API from Gleeful AI — 1 operation(s) for catalog.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Catalog
   properties:
@@ -174,7 +170,6 @@ apis:
   name: Gleeful AI Cite API
   description: The Cite API from Gleeful AI — 2 operation(s) for cite.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Cite
   properties:
@@ -200,7 +195,6 @@ apis:
   name: Gleeful AI Compare API
   description: The Compare API from Gleeful AI — 2 operation(s) for compare.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Compare
   properties:
@@ -226,7 +220,6 @@ apis:
   name: Gleeful AI Content API
   description: The Content API from Gleeful AI — 1 operation(s) for content.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Content
   properties:
@@ -252,7 +245,6 @@ apis:
   name: Gleeful AI Examples API
   description: The Examples API from Gleeful AI — 1 operation(s) for examples.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Example
   tags_raw:
@@ -280,7 +272,6 @@ apis:
   name: Gleeful AI Fixes API
   description: The Fixes API from Gleeful AI — 1 operation(s) for fixes.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Fixes
   properties:
@@ -306,7 +297,6 @@ apis:
   name: Gleeful AI Health API
   description: The Health API from Gleeful AI — 1 operation(s) for health.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Health
   properties:
@@ -332,7 +322,6 @@ apis:
   name: Gleeful AI Meta API
   description: The Meta API from Gleeful AI — 1 operation(s) for meta.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Meta
   properties:
@@ -358,7 +347,6 @@ apis:
   name: Gleeful AI Preview API
   description: The Preview API from Gleeful AI — 2 operation(s) for preview.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Preview
   properties:
@@ -384,7 +372,6 @@ apis:
   name: Gleeful AI Pricing API
   description: The Pricing API from Gleeful AI — 1 operation(s) for pricing.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Pricing
   properties:
@@ -410,7 +397,6 @@ apis:
   name: Gleeful AI Probe API
   description: The Probe API from Gleeful AI — 1 operation(s) for probe.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Probe
   properties:
@@ -436,7 +422,6 @@ apis:
   name: Gleeful AI Schema API
   description: The Schema API from Gleeful AI — 1 operation(s) for schema.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Schema
   properties:
@@ -462,7 +447,6 @@ apis:
   name: Gleeful AI Status API
   description: The Status API from Gleeful AI — 1 operation(s) for status.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - Status
   properties:
@@ -488,7 +472,6 @@ apis:
   name: Gleeful AI Llms API
   description: The Llms API from Gleeful AI — 1 operation(s) for llms.
   humanURL: https://visibility.gleefulai.com/docs
-  baseURL: https://visibility.gleefulai.com
   tags:
   - LLM
   tags_raw:
