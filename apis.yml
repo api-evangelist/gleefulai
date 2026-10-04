@@ -496,6 +496,9 @@ apis:
   - type: LlmsText
     url: https://visibility.gleefulai.com/llms.txt
 common:
+- type: CapabilityMap
+  url: capabilities/gleefulai-capability-edges.yml
+  name: Gleeful AI Business Capability Map
 - type: DomainSecurity
   url: security/gleefulai-domain-security.yml
 - url: https://visibility.gleefulai.com

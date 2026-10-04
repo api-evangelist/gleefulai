@@ -1,0 +1,47 @@
+slug: gleefulai
+provider: Gleeful AI
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Audit
+  spec_file: gleefulai-audit-api-openapi.yml
+  capability_id: BC-400.60
+  capability_id_l1: BC-400
+  capability_name: Digital Marketing Management
+  confidence: 0.75
+  evidence: POST /api/audit/full  'Full AI visibility audit with categories and recommendations'; 'AI
+    visibility / AEO audit API'
+  reason: Scores how visible a website is to AI assistants and returns optimisation recommendations —
+    this is answer-engine/SEO optimisation of web presence, i.e. digital marketing measurement, not an
+    internal audit or compliance function.
+- tag: Compare
+  spec_file: gleefulai-compare-api-openapi.yml
+  capability_id: BC-400.30
+  capability_id_l1: BC-400
+  capability_name: Market Intelligence Management
+  confidence: 0.7
+  evidence: POST /api/compare/gap  'Competitor AI visibility gap analysis'; 'Suggest competitor domains
+    for gap analysis'
+  reason: Identifies competitor domains and analyses visibility gaps versus them — competitive intelligence
+    feeding marketing decisions, which maps to Market Intelligence Management.
+- tag: Schema
+  spec_file: gleefulai-schema-api-openapi.yml
+  capability_id: BC-400.60
+  capability_id_l1: BC-400
+  capability_name: Digital Marketing Management
+  confidence: 0.7
+  evidence: POST /api/schema/generate — "Generate Organization / WebSite / SoftwareApplication / FAQPage
+    JSON-LD pack"
+  reason: Generating schema.org structured-data markup for a website is a concrete web/SEO optimisation
+    activity, mapping to Digital Marketing Management. Note the tag 'Schema' here is schema.org markup,
+    not an API data schema.
